@@ -1,7 +1,7 @@
 # Sniffer
 Sniffer -  is a computer program or piece of computer hardware that can intercept and log traffic that passes over a digital network or part of a network.
 
-#Principle of operation (Polish)     
+# Principle of operation (Polish)     
 http://magnum34.pl/sniffer-w-pythonie/
 
 # License
