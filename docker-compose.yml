@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+    sniffer:
+        build:
+            context: ./
+            dockerfile: DockerFile
+        volumes:
+            -  ./:/app
