@@ -16,11 +16,9 @@ class ConfigSocket(metaclass=ConfigMetaClass):
 
     def __init__(self):
         try:
-            self.SOCKET = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(0x0003))
+            self.connect = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(0x0003))
+            packet, addr = self.connect.recvfrom(65565)
+            self.raw_packet = packet
+            self.addr = addr 
         except socket.error():
             print(socket.error())
-
-config = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(0x0003))
-#config = ConfigSocket()
-packet, addr = config.recvfrom(65565)
-print(packet)
